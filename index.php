@@ -7,6 +7,7 @@
 <body>
   <h1>Windowsチーム苦戦中</h1>
    <p>初めてのGitHub</p>
+   <h2>追加してみます</h2>
     
 </body>
 </html>
