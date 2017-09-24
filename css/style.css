@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+html {
+    font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+body{
+    width: 600px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 30px;
+    font-style: bold;
+    margin-top: 10px;
+}
+
+form{
+    width: 550px;
+    margin:20px auto;
+}
+
+#fname{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#fname input{
+    width: 500px;
+}
+
+#fcomment{
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#fcomment textarea{
+    width: 500px;
+}
+
+#fsubmit{
+    text-align: center;
+}
+
+#fsubmit input{
+    width: 200px;
+}
+.toukou{
+    margin-top: 10px;
+}
