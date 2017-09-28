@@ -1,5 +1,5 @@
 <?php
-//2. DB接続のブロック
+//2. DBに接続
 try {
   $pdo = new PDO('mysql:dbname=gs_db16;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
@@ -15,10 +15,13 @@ $view = "";
 if($status==false){
   $error = $stmt->errorInfo();
   exit("QueryError:".$error[2]);
-  
+
 }else{
   while($r = $stmt->fetch(PDO::FETCH_ASSOC)){
-      $view .= '<p class="toukou" style="background-color:#F5F5F5; padding:10px;">'. '<span style="color:#000080;">'.$r["name"]."</span>"."　".'<span style="color:#A9A9A9; font-size:14px;">'.$r["indate"]."</span>"."<br>".$r["comment"]."</p>";
+    if($r["name"] == null){
+    $r["name"] = "名無しさん";
+  }
+    $view .= '<p class="toukou" style="background-color:#fff; padding:10px;">'. '<span style="color:#000080;">'.$r["name"]."</span>"."　".'<span style="color:#A9A9A9; font-size:14px;">'.$r["indate"]."</span>"."<br>".$r["comment"]."</p>";
   }
 }
 ?>
